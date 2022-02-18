@@ -83,7 +83,7 @@ Group member 1:
 
 ```{r}
 
-
+lemmonData <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
 
 ```
 
