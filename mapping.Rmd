@@ -5,6 +5,7 @@ output: pdf_document
 
 ## Mapping Species Occurrences
 
+
 Adam Schwarz, Katie Crocker, Katelyn Osborne  
 LemmonHeads 
 Mapping Species Occurrences 
@@ -83,7 +84,7 @@ Group member 1:
 
 ```{r}
 
-
+lemmonData <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
 
 ```
 
@@ -96,7 +97,8 @@ Group member 2:
 
 ```{r}
 
-
+lemmonData2 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
+View(lemmonData2)
 
 ```
 
