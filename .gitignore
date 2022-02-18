@@ -37,10 +37,23 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+<<<<<<< HEAD
+# ignore 
+
+github.R
+
+=======
 
 # don't display my token to the world
 <<<<<<< HEAD
 github.R
+<<<<<<< HEAD
 =======
 github.R
 >>>>>>> 3f36a7c1595478ef730432695e97e97b0fc86e46
+=======
+<<<<<<< HEAD
+>>>>>>> 3f36a7c1595478ef730432695e97e97b0fc86e46
+=======
+>>>>>>> f07ff6dfbb14f0d5dd210217212abac0411de55b
+>>>>>>> 8204584b8725b2d45095995685cf0d54b51044f5
