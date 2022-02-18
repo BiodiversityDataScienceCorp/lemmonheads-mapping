@@ -39,4 +39,8 @@ vignettes/*.pdf
 .Renviron
 
 # don't display my token to the world
+<<<<<<< HEAD
 github.R
+=======
+github.R
+>>>>>>> 3f36a7c1595478ef730432695e97e97b0fc86e46
