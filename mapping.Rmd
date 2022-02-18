@@ -5,8 +5,9 @@ output: pdf_document
 
 ## Mapping Species Occurrences
 
-Your Name(s) 
-Group Name 
+
+Adam Schwarz, Katie Crocker, Katelyn Osborne  
+LemmonHeads 
 Mapping Species Occurrences 
 Feburary 15th 
 
@@ -97,8 +98,9 @@ Group member 2:
 
 ```{r}
 
-LemmonsData<- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
 
+lemmonData2 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
+View(lemmonData2)
 
 ```
 
@@ -110,8 +112,8 @@ Group member 3:
 * Tell your groupmates to pull in Slack
 
 ```{r}
-
-
+lemmonData3 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
+View(lemmond)
 
 ```
 
