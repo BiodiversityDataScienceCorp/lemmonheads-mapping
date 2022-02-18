@@ -32,7 +32,7 @@ library("maptools")
 library("rgdal")
 library("dismo")
 library("sf")
-library("")
+library("tidyverse")
 
 
 ```
@@ -104,6 +104,8 @@ Group member 2:
 lemmonData2 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
 View(lemmonData2)
 
+lemmonData2 <- lemmonData2$gbif$data$Asclepias_lemmonii_A.Gray
+
 ```
 
 
@@ -115,7 +117,6 @@ Group member 3:
 
 ```{r}
 lemmonData3 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
-View(lemmond)
 
 ```
 
@@ -127,7 +128,7 @@ Group member 4 (if applicable):
 
 ```{r}
 
-
+#N/A
 
 ```
 
@@ -169,7 +170,13 @@ Check for and filter out any occurrences in which individualCount==0
 
 ```{r}
 
+unique(lemmonData$individualCount)
 
+zeroMilkweed <- subset(x=lemmonData, individualCount==0)
+
+lemmonData <- anti_join(lemmonData, zeroMilkweed)
+
+lemmonData
 
 
 ```
