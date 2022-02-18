@@ -32,6 +32,7 @@ library("maptools")
 library("rgdal")
 library("dismo")
 library("sf")
+library("")
 
 
 ```
@@ -86,6 +87,7 @@ Group member 1:
 
 lemmonData <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
 
+lemmonData <- lemmonData$gbif$data$Asclepias_lemmonii_A.Gray
 
 ```
 
@@ -146,8 +148,13 @@ Check for and filter out any data in which occurrenceStatus=="Absent"
 
 ```{r}
 
+unique(lemmonData$occurrenceStatus)
 
+absent <- subset(x=lemmonData, occurrenceStatus != "PRESENT")
 
+lemmonData <- anti_join(lemmonData, absent)
+
+lemmonData
 
 ```
 
