@@ -33,6 +33,7 @@ library("rgdal")
 library("dismo")
 library("sf")
 library("tidyverse")
+library("tidyr")
 
 
 ```
@@ -189,7 +190,13 @@ Check for obvious errors in lat/long. Remove those points if necessary.
 * Commit
 * Push
 * Tell your groupmates to pull in Slack
+```{r}
 
+lemmonData <- lemmonData %>% filter(longitude != 'NA')
+lemmonData
+
+
+```
 
 
 Group Member 4 (or 1):
@@ -200,6 +207,12 @@ Reduce data columns, and save to a CSV file
 * Push
 * Tell your groupmates to pull in Slack
 NOTE: Depending upon the size of your .csv file, you may not want to commit and push it. Your groupmates can always re-run the code to generate their own local copy.
+
+```{r}
+
+write_csv(lemmonData, "lemmonDataGood.csv")
+
+```
 
 
 ### Mapping
@@ -283,9 +296,49 @@ Select a group member to create a map of your milkweed occurrence data. Follow t
 
 ```{r}
 
+# ceiling returns the smallest integer that is greater than or equal to a value
+# max gives the largest value of the column data
+# so if the highest value in goldfinches$latitude is 46.5, then its ceiling is 47
 
+max.lat <- ceiling(max(lemmonData$latitude))
 
+# floor and min work similarly (but opposite)
+# if the lowest value of goldfinches$latitude is 43.84, then its floor is 43
 
+min.lat <- floor(min(lemmonData$latitude))
+
+# run same calculations for longitude
+
+max.lon <- ceiling(max(lemmonData$longitude))
+min.lon <- floor(min(lemmonData$longitude))
+
+# indicates that I want to save the next output as "or.jpg"
+jpeg(file="Assignment5_LemmonHeads.jpg")
+
+# this loads spatial polygons
+data(wrld_simpl)
+
+# Plot the base map
+plot(wrld_simpl, 
+     xlim = c(min.lon, max.lon), # sets upper/lower x
+     ylim = c(min.lat, max.lat), # sets upper/lower y
+     axes = TRUE, 
+     col = "grey95",
+     main="Lemmon's Milkweed species occurrences in Arizona and Mexico",  # a title
+     sub="131 occurrences of Lemmon's Milkweed" # a caption
+     )
+
+# Add the points for individual observation
+points(x = lemmonData$longitude, 
+       y = lemmonData$latitude, 
+       col = "blue", 
+       pch = 20, 
+       cex = 0.75)
+# And draw a little box around the graph
+box()
+
+# indicates I'm done with plotting and saving to jpg
+dev.off()
 
 ```
 
