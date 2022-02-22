@@ -12,6 +12,10 @@ library("sf")
 library("tidyverse")
 library("tidyr")
 
+# load functions from functions.R
+source("src/functions.R")
+
+
 # clean data #
 
 
