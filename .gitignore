@@ -31,11 +31,8 @@ vignettes/*.pdf
 github.R
 =======
 # don't display my token to the world
-
 github.R
-
-
 github.R
-
 lemmonData.csv
 lemmon.jpg
+test.jpg
