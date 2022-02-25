@@ -24,7 +24,7 @@
 ## Data Source for Occurence and Distribution Modeling:
 ### [GBIF](https://www.gbif.org/species/3170287)  
 
-
+## Species Occurrence Map
 ## ![Species Occurrence Map](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/Assignment5_LemmonHeads.jpg)  
 
 
