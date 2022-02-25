@@ -2,33 +2,33 @@
 
 
 ## Species Name:
-### Lemmon's Milkweed  \
+### Lemmon's Milkweed  
 
 
 ## Species Taxonomy:
-### Asclepias Lemmonii  \
+### Asclepias Lemmonii  
 
 
 ## Species Description:
-### Lemmon's Milkweed is a species of perennial herb in the family Apocynaceae. They are native to the contiguous United States. Flowers bloom in white, pink, and green in July through October. They are generally recognized by their large, rounded leaves.  \
+### Lemmon's Milkweed is a species of perennial herb in the family Apocynaceae. They are native to the contiguous United States. Flowers bloom in white, pink, and green in July through October. They are generally recognized by their large, rounded leaves.  
 
 
 ## Habitat Description:
-### Lemmon’s milkweed is found at elevations ranging from 1200-2100 meters. It generally grows in open and dry areas including slopes and canyons. It’s habitat ranges from southern Arizona to southwestern Mexico.  \
+### Lemmon’s milkweed is found at elevations ranging from 1200-2100 meters. It generally grows in open and dry areas including slopes and canyons. It’s habitat ranges from southern Arizona to southwestern Mexico.  
 
 
 ## Larval Host Information:
-### There are no studies specifically on what species Lemmon’s milkweed is a larval host for. Generally, milkweed species are known to be larval hosts for monarch butterflies. This is not the only species they’re a host for. Milkweeds are also larval hosts for other butterflies and moths such as Dogbane Tiger moth (Cycnia tenera) and the Queen Butterfly (Danaus gilippus).  \
+### There are no studies specifically on what species Lemmon’s milkweed is a larval host for. Generally, milkweed species are known to be larval hosts for monarch butterflies. This is not the only species they’re a host for. Milkweeds are also larval hosts for other butterflies and moths such as Dogbane Tiger moth (Cycnia tenera) and the Queen Butterfly (Danaus gilippus).  
 
 
 ## Data Source for Occurence and Distribution Modeling:
-### [GBIF](https://www.gbif.org/species/3170287)  \
+### [GBIF](https://www.gbif.org/species/3170287)  
 
 
-## [Species Occurrence Map](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping/blob/main/output/Assignment5_LemmonHeads.jpg)  \
+## ![Species Occurrence Map](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/Assignment5_LemmonHeads.jpg)  
 
 
-## [Link to GitHub Respository](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping)  \
+## [Link to GitHub Respository](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping)  
 
 
 ## References:
