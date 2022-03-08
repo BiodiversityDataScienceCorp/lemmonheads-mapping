@@ -92,4 +92,23 @@ box()
 # stop mapping
 dev.off()
 
+##################
+# SDM Mapping #
 
+# Load files
+source(file = "src/setup.R")
+
+# ONLY RUN IF YOU WANT TO BREAK RSTUDIO
+
+# query
+lemmon <- occ(query='Asclepias lemmonii', from="gbif")
+lemmonData <- lemmon$gbif$data$Asclepias_lemmonii
+
+# only character data
+lemmonData <- apply(lemmonData, 2, as.character)
+
+# make .csv
+write.csv(lemmonData, "data/lemmonii.csv")
+
+# run it
+source("src/lemmonii-sdm-single.R")
