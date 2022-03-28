@@ -2,6 +2,8 @@
 # LemmonHeads 
 
 #####
+install.packages("maps")
+install.packages("dplyr")
 
 # load libraries
 library("spocc")
@@ -13,6 +15,9 @@ library("dismo")
 library("sf")
 library("tidyverse")
 library("tidyr")
+library(dplyr)
+library(maps)
+
 
 #####
 
@@ -133,4 +138,4 @@ write.csv(lemmonsData, "data/lemmons.csv")
 
 # run it
 source("src/lemmonii-sdm-single.R")
-source("src/lemmons-future-sdm-single.R")
+source("src/future-sdm-single.R")
