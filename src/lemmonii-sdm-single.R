@@ -84,26 +84,106 @@ ymax <- extent(sdm.raster)[4]
 plot.file <- paste0(outpath, outprefix, "-single-prediction.pdf")
 pdf(file = plot.file, useDingbats = FALSE)
 
-# Load in data for map borders
-data(wrld_simpl)
+########
 
-# Draw the base map
-plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), axes = TRUE, col = "gray95", 
-     main = paste0(gsub(pattern = "_", replacement = " ", x = outprefix), " - current"))
+ymax <- extent(sdm.raster)[4]
 
-# Add the model rasters
-plot(sdm.raster, legend = FALSE, add = TRUE)
+plot.file.state <- paste0(outpath, outprefix, "-single-prediction-state-borders.jpg")
+plot.file.country<- paste0(outpath, outprefix, "-single-prediction-country-borders.jpg")
+plot.file.county<- paste0(outpath, outprefix, "-single-prediction-county-borders.jpg")
 
-# Redraw the borders of the base map
-plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
+#Convert sdm.raster to a data frame
+# First, to a SpatialPointsDataFrame
+sdf <- rasterToPoints(sdm.raster, spatial = TRUE)
+# Then to a 'conventional' dataframe
+rasterDF  <- data.frame(sdf)
 
-# Add bounding box around map
-box()
+# removes absence data
+sdmRasterDF<-rasterDF %>% subset(layer>1)
 
-# Stop re-direction to PDF graphics device
-dev.off()
+####################
+
+
+
+states<-ggplot(prepared.data) +
+  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
+  borders("state", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+  scale_size_area() +
+  coord_quickmap() +
+  labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
+
+ggsave(plot.file.state, states)
+
+countries<-ggplot(prepared.data) +
+  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
+  borders("world", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+  scale_size_area() +
+  coord_quickmap() +
+  labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
+
+
+ggsave(plot.file.country, countries)
+
+
+counties<-ggplot(prepared.data) +
+  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
+  borders("county", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+  scale_size_area() +
+  coord_quickmap() +
+  labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
+
+
+ggsave(plot.file.county, counties)
+
 
 # Let user know analysis is done.
-message(paste0("\nAnalysis complete. Map image written to ", plot.file, "."))
+message(paste0("\nAnalysis complete. Map image written to ", plot.file.country, ", ", plot.file.county, ", and ",plot.file.state,"."))
 
 rm(list = ls())
+
+######################
+
+# az<-map_data("county", "arizona")
+# wrld<-map_data("world", c("mexico", "canada"))
+# 
+# states<-ggplot(prepared.data) +
+#   geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+#   geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
+#   borders("state", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+#   geom_polygon(data=az, mapping=aes(x=long, y=lat,group = group), fill = NA, colour = "grey60") +
+#   geom_polygon(data=wrld, mapping=aes(x=long, y=lat,group = group), fill = NA, colour = "grey60") +
+#   scale_size_area() +
+#   coord_quickmap() +
+#   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax))+
+#   labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
+# 
+# ggsave(plot.file.state, states)
+
+############################
+
+# # Load in data for map borders
+# data(wrld_simpl)
+# 
+# # Draw the base map
+# plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), axes = TRUE, col = "gray95",
+#      main = paste0(gsub(pattern = "_", replacement = " ", x = outprefix), " - current"))
+# 
+# # Add the model rasters
+# plot(sdm.raster, legend = FALSE, add = TRUE)
+# 
+# # Redraw the borders of the base map
+# plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
+# 
+# # Add bounding box around map
+# box()
+# 
+# # Stop re-direction to PDF graphics device
+# dev.off()
+# 
+# # Let user know analysis is done.
+# message(paste0("\nAnalysis complete. Map image written to ", plot.file, "."))
+# 
+# rm(list = ls())
