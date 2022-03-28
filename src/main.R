@@ -112,3 +112,25 @@ write.csv(lemmonData, "data/lemmonii.csv")
 
 # run it
 source("src/lemmonii-sdm-single.R")
+
+##################
+# Forecasting Model #
+
+# Load files
+source(file = "src/setup.R")
+
+# ONLY RUN IF YOU WANT TO BREAK RSTUDIO
+
+# query
+lemmons <- occ(query='Asclepias lemmonii', from="gbif")
+lemmonsData <- lemmons$gbif$data$Asclepias_lemmonii
+
+# only character data
+lemmonsData <- apply(lemmonsData, 2, as.character)
+
+# make .csv
+write.csv(lemmonsData, "data/lemmons.csv")
+
+# run it
+source("src/lemmonii-sdm-single.R")
+source("src/lemmons-future-sdm-single.R")
