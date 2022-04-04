@@ -1,61 +1,26 @@
-# Adam Schwarz, Katie Crocker, Katelyn Osborne  
-# LemmonHeads 
-
-#####
-install.packages("maps")
-install.packages("dplyr")
-
-# load libraries
-library("spocc")
-library("sp")
-library("raster")
-library("maptools")
-library("rgdal")
-library("dismo")
-library("sf")
-library("tidyverse")
-library("tidyr")
-library(dplyr)
-library(maps)
-
+# Data Retrieval and Initial Plotting
+# Adam Schwarz, Katie Crocker, and Katelyn Osborne
+# March 31st 2022
 
 #####
 
-# load functions from functions.R #
+# load functions from functions.R
 source("src/functions.R")
 
 #####
 
-# pull data #
-  # group member 1
-lemmonData <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
-lemmonData <- lemmonData$gbif$data$Asclepias_lemmonii_A.Gray
-  
-  # group member 2
-lemmonData2 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
-lemmonData2 <- lemmonData2$gbif$data$Asclepias_lemmonii_A.Gray
-
-  # group member 3
-lemmonData3 <- occ(query='Asclepias lemmonii A.Gray', from='gbif', limit=1000)
+# load packages
+loadPackages()
 
 #####
 
-# clean data #
-  # no "ABSENT" data
-unique(lemmonData$occurrenceStatus)
-absent <- subset(x=lemmonData, occurrenceStatus != "PRESENT")
-lemmonData <- anti_join(lemmonData, absent)
-lemmonData
+# query data
 
-  # no zero counts
-unique(lemmonData$individualCount)
-zeroMilkweed <- subset(x=lemmonData, individualCount==0)
-lemmonData <- anti_join(lemmonData, zeroMilkweed)
-lemmonData
+lemmonData <- query()
 
-  # remove missing data
-lemmonData <- lemmonData %>% filter(longitude != 'NA')
-lemmonData
+# clean data - only present, individual count above zero, and no missing coordinates
+
+lemmonData <- clean(lemmonData)
 
 #####
 
@@ -97,45 +62,13 @@ box()
 # stop mapping
 dev.off()
 
-##################
-# SDM Mapping #
+#################
+# SDM Mapping and Forecast Modeling #
 
-# Load files
-source(file = "src/setup.R")
+modelPrep(lemmonData)
 
-# ONLY RUN IF YOU WANT TO BREAK RSTUDIO
-
-# query
-lemmon <- occ(query='Asclepias lemmonii', from="gbif")
-lemmonData <- lemmon$gbif$data$Asclepias_lemmonii
-
-# only character data
-lemmonData <- apply(lemmonData, 2, as.character)
-
-# make .csv
-write.csv(lemmonData, "data/lemmonii.csv")
-
-# run it
+# run for SDM map
 source("src/lemmonii-sdm-single.R")
 
-##################
-# Forecasting Model #
-
-# Load files
-source(file = "src/setup.R")
-
-# ONLY RUN IF YOU WANT TO BREAK RSTUDIO
-
-# query
-lemmons <- occ(query='Asclepias lemmonii', from="gbif")
-lemmonsData <- lemmons$gbif$data$Asclepias_lemmonii
-
-# only character data
-lemmonsData <- apply(lemmonsData, 2, as.character)
-
-# make .csv
-write.csv(lemmonsData, "data/lemmons.csv")
-
-# run it
-source("src/lemmonii-sdm-single.R")
-source("src/future-sdm-single.R")
+# run after previous for forecast model
+source("future-sdm-single.R")
