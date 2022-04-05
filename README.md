@@ -1,6 +1,6 @@
 # Lemmonhead's Repository
 
-## Authors: Adam Schwarz, Katelyn Osborn, and Katie Crocker
+## Authors: Adam Schwarz, Katelyn Osborne, and Katie Crocker
 
 ## Source Folder
 
