@@ -2,11 +2,11 @@
 
 
 ## Overview
-Description of the purpose of the repository.
+DESCRIPTION HERE: This repository draws on data from GBIF to create distribution models of the monarch butterfly host species, Asclepias lemmonii (Lemmon's Milkweed). The code creates an occurence map, species distrubition model, and climate forecast model for this species of milkweed.
 
-Make sure you provide a link to your [SSA.md](SSA.md)
+Link to [Species Status Assessment](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping/blob/main/SSA-asclepias-lemmonii.md).
 
-Acknowledge borrowed code from  [https://github.com/jcoliver/biodiversity-sdm-lesson](https://github.com/jcoliver/biodiversity-sdm-lesson), with further details in the Structure section below.
+Thank you to Jeff Oliver for [borrowed code](https://github.com/jcoliver/biodiversity-sdm-lesson).
 
 ## Dependencies
 The following additional R packages are required (these will be installed by running the the setup script, `src/setup.R`):
@@ -19,7 +19,7 @@ The following additional R packages are required (these will be installed by run
 + etc
 
 ## Structure
-+ SSA.md: Species Status Assessment for (insert species here)
++ SSA.md: Species Status Assessment for Asclepias lemmonii
 + data
   + wc2-5: climate data at 2.5 minute resolution from [WorldClim](http://www.worldclim.org) (_note_: this folder is not under version control, but will be created by running the setup script (`scripts/setup.R`))
   + cmip5: forcast climate data at 2.5 minute resolution from [WorldClim](http://www.worldclim.org). These data were originally downloaded from the WorldClim website, but stored in the `.RData` format for ease of use. The data are for the year 2070, based on the GFDL-ESM2G model with an RCP of 4.5 CO<sub>2</sub>. For an examination of different forecast models, see [McSweeney et al. 2015](https://link.springer.com/article/10.1007/s00382-014-2418-8).
