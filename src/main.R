@@ -1,16 +1,16 @@
 # Data Retrieval and Initial Plotting
 # Adam Schwarz, Katie Crocker, and Katelyn Osborne
-# March 31st 2022
+# April 7th 2022
+
+#####
+
+# load packages and load climate data
+source("src/setup.R")  
 
 #####
 
 # load functions from functions.R
 source("src/functions.R")
-
-#####
-
-# load packages
-loadPackages()
 
 #####
 
