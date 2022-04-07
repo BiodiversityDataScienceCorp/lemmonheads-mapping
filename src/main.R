@@ -28,7 +28,6 @@ lemmonData <- clean(lemmonData)
 
 occurenceMap(lemmonData)
 
-
 #################
 # SDM Mapping and Forecast Modeling #
 
@@ -38,4 +37,4 @@ modelPrep(lemmonData)
 source("src/lemmonii-sdm-single.R")
 
 # run after previous for forecast model
-source("future-sdm-single.R")
+source("src/future-sdm-single.R")

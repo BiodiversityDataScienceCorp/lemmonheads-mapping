@@ -41,4 +41,20 @@ The following additional R packages are required (these will be installed by run
 
 ## Running the code
 
-1. Open main.R
+1.  Open main.R
+2.  Run the following lines in order to run the necessary setup
+
+a\. `soucre("src/setup.R")`
+
+b\. `source("src/functions.R")`
+
+3.  Run the following lines in order to query and clean the data
+
+a\. `lemmonData <- query()`
+
+b\. `lemmonData <- clean(lemmonData)`
+
+4.  To create an occurence map, run`occurenceMap(lemmonData)`
+5.  To create either an SDM or an SDF, run`modelPrep(lemmonData)` 
+a\. For an SDM or SDF, run`source("src/lemmonii-sdm-single.R")` 
+b\. For an SDF, run`source("src/future-sdm-single.R")\` after you have ran the previous line

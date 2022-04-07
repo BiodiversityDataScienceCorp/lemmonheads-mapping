@@ -36,7 +36,7 @@ There are no studies specifically on what species Lemmon's milkweed is a larval 
 
 ### [GBIF](https://www.gbif.org/species/3170287)
 
-All data was sourced and quieried from GBIF for occurence and distribution modeling. The Global Biodiversitry Information Facility (GBIF) is a site that works to provide everyone open access to data. This data source was used because it compiled all of the occurence data we needed from multiple sources including iNaturalist and Arizona State University.
+All data was sourced and quieried from GBIF for occurence and distribution modeling. The Global Biodiversitry Information Facility (GBIF) is a site that works to provide everyone open access to data. This data source was used because it compiled all of the occurence data we needed from multiple sources including iNaturalist and Arizona State University. The dataset was small enough where we did not add any query arguments.
 
 ### [WorldClim](https://www.worldclim.org/data/bioclim.html)
 
@@ -48,7 +48,7 @@ The data set queried from GBIF was checked to ensure it had all relevant informa
 
 ## Species Occurrence Map
 
-![Species Occurrence Map](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/Assignment5_LemmonHeads.jpg)
+![Species Occurrence Map](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/occurence_map.jpg)
 
 ## Species Distribution Modeling
 
