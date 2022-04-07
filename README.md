@@ -31,6 +31,12 @@ The following additional R packages are required (these will be installed by run
     -   lemmonii.csv: data harvested from [GBIF](https://www.gbif.org/) for *Asclepias Lemmonii*. This dataset is not under version control, but will be harvested by running src/main.R.
     -   worldClimVariables.csv: list of climate data used from WorldClim
 -   output: directory containing image outputs
+    - current-sdm-map.png: SDM map
+    - lemmonii-single-current-future-sdm.jpg: SDM with both current and future data
+    - lemmonii-single-prediction-country-borders.jpg: SDF with country borders
+    - lemmonii-single-predicition-county-borders.jpg: SDF with county borders
+    - lemmonii-single-predicition-state-borders.jpg: SDF with state broders
+    - occurence_map.jpg: occurence map 
 -   src: directory containing R scripts for gathering occurrence data, running forecast models, and creating map outputs.
     -   main.R: creates an occurence map, SDM, and SDF
     -   functions.R: contains commonly used functions
