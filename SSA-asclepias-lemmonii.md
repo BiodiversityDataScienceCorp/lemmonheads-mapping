@@ -60,6 +60,22 @@ Species Distribution Models (SDMs) are used to understand what environmental con
 
 Our SDM was made using recorded species occurence data and environmental data. For each location where the species was documented, information on the environmental variables were considered. Using this information, the model visualizes suitable environments for our species.
 
+![SDM](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/current-sdm-map.png)
+
+## Species Distribution Forecast Estimation
+
+### SDF
+
+Species Distribution Forecasts (SDFs) use species distribution models and future climate forecasts to estimate where a species may be found in the future and what areas will have suitable environmental conditions for a species survival. With climate change affecting many environmental variables, SDFs are an important tool in understanding how a species' distribution may change in the future.
+
+### Methods
+
+Our SDF was made using recorded species occurrence data in conjunction with the previously mentioned environmental data and climate data from WorldClim. The software used climate forecasting to predict how a changing climate will impact environmental factors geographically. This allowed us to use the current habitat requirements of our species to estimate where these requirements will be met after climate changes have occurred. The final model visualizes areas of future suitability, allowing us to see where the species will likely exist in the future and how different this is from the current species distribution.
+
+![SDF](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/lemmonii-single-current-future-sdm.jpg)
+
+## Summary of Findings
+
 ## References:
 
 ### [GBIF](https://www.gbif.org/species/3170287)
