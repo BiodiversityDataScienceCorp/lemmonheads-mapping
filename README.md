@@ -24,7 +24,7 @@ The following additional R packages are required (these will be installed by run
 
 ## Structure
 
--   SSA.md: Species Status Assessment for *Asclepias Lemmonii*
+-   SSA-asclepias-lemmonii.md: Species Status Assessment for *Asclepias Lemmonii*
 -   data: directory containing necessary data
     -   wc2-5: climate data at 2.5 minute resolution from [WorldClim](http://www.worldclim.org) (*note*: this folder is not under version control, but will be created by running the setup script (`scripts/setup.R`))
     -   cmip5: forcast climate data at 2.5 minute resolution from [WorldClim](http://www.worldclim.org). These data were originally downloaded from the WorldClim website, but stored in the `.RData` format for ease of use. The data are for the year 2070, based on the GFDL-ESM2G model with an RCP of 4.5 CO<sub>2</sub>. For an examination of different forecast models, see [McSweeney et al. 2015](https://link.springer.com/article/10.1007/s00382-014-2418-8).

@@ -8,7 +8,7 @@
 
 ## Species Taxonomy:
 
-### Asclepias Lemmonii
+### *Asclepias Lemmonii*
 
 ## Species Synonym
 
@@ -75,6 +75,8 @@ Our SDF was made using recorded species occurrence data in conjunction with the 
 ![SDF](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/lemmonii-single-current-future-sdm.jpg)
 
 ## Summary of Findings
+
+Lemmonii milkweed are currently observed and recorded across what appears to be the West Sierra Madre Occidental mountain range of Mexico and the southwest corner of Arizona (specifically the Chiricahua Mountain Range and the Huachuca Mountain Range). Based on our climate indicators, we predict that the species will decrease in range and density throughout its distribution, especially in Arizona. Moreover, suitable regions will become increasingly isolated with large gaps in between. These areas will be where elevation is high enough to sustain the climate necessary for *lemmonii* growth. These factors are likely to create strain for migrating Monarch butterflies that rely on this milkweed species as a food source. 
 
 ## References:
 
