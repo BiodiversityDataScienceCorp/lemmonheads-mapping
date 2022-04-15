@@ -65,7 +65,7 @@ Species Distribution Models (SDMs) are used to understand what environmental con
 
 Our SDM was made using recorded species occurrence data and environmental data. For each location where the species was documented, information on the environmental variables were considered. Using this information, the model visualizes suitable environments for our species.
 
-![SDM](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/current-sdm-map.png)
+![SDM](https://raw.githubusercontent.com/BiodiversityDataScienceCorp/lemmonheads-mapping/main/output/sdm.jpg)
 
 ## Species Distribution Forecast Estimation
 
@@ -96,7 +96,7 @@ In monarch butterfly conservation efforts, we do not believe that the Lemmon’s
 
 ### 3. [NatureServe Explorer](https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.131047/Asclepias_lemmonii)
 
-### 4. [Exerces](https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf)
+### 4. [Xerces](https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf)
 
 ### 5. [GBIF](https://www.gbif.org/species/3170287)
 
