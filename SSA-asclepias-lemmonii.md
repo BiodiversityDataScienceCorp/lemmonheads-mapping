@@ -46,7 +46,7 @@ The climate data used came from WorldClim. This model takes into account 19 bioc
 
 ### Data Cleaning Process
 
-The data set queried from GBIF was checked to ensure it had all relevant information. This was done by looking for and removing incomplete longitude and latitude entries, entries labeled "Absent" in the occurence status column, and entries with an individual count of zero. We did not query for specific years, as the data set was small enough that this would significantly lower our data count.
+The data set queried from GBIF was checked to ensure it had all relevant information. This was done by looking for and removing incomplete longitude and latitude entries, entries labeled "Absent" in the occurence status column, and entries with an individual count of zero. We did not query for specific years, as the data set was small enough that this would significantly lower our data count and accuracy
 
 ## Species Occurrence Map
 
