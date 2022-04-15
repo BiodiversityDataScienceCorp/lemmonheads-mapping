@@ -122,14 +122,17 @@ sdmRasterDF<-rasterDF %>% subset(layer>1)
 wrld<-ggplot2::map_data("world", c("mexico", "canada"))
 
 states<-ggplot(prepared.data) +
-  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +  
-  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
+  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend = FALSE) +  
+  geom_point(aes(x=lon, y=lat, color='Occurences')) +
+  scale_color_manual(name='Legend',
+                     breaks=c('Occurences', 'Distribution Forecast'),
+                     values=c('Occurences'='#ff455e', 'Distribution Forecast'='black')) +
   borders("state", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
   geom_polygon(data=wrld, mapping=aes(x=long, y=lat,group = group), fill = NA, colour = "grey60") +
   scale_size_area() +
   coord_quickmap() +
   coord_fixed(xlim = c(xmin, xmax), ylim = c(ymin, ymax))+
-  labs(title="Current species occurrences with future climate SDM projections", x="longitude", y="latitude")
+  labs(title="Future climate SDM projections for 2070", x="Longitude", y="Latitude")
 
 ggsave(plot.file.sdm, states)
 

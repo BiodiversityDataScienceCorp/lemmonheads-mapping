@@ -36,5 +36,5 @@ modelPrep(lemmonData)
 # run for SDM map
 source("src/lemmonii-sdm-single.R")
 
-# run after previous for forecast model
+# run for forecast model
 source("src/future-sdm-single.R")

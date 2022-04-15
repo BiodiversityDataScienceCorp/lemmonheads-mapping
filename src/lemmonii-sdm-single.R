@@ -86,63 +86,63 @@ pdf(file = plot.file, useDingbats = FALSE)
 
 ########
 
-ymax <- extent(sdm.raster)[4]
-
-plot.file.state <- paste0(outpath, outprefix, "-single-prediction-state-borders.jpg")
-plot.file.country<- paste0(outpath, outprefix, "-single-prediction-country-borders.jpg")
-plot.file.county<- paste0(outpath, outprefix, "-single-prediction-county-borders.jpg")
-
-#Convert sdm.raster to a data frame
-# First, to a SpatialPointsDataFrame
-sdf <- rasterToPoints(sdm.raster, spatial = TRUE)
-# Then to a 'conventional' dataframe
-rasterDF  <- data.frame(sdf)
-
-# removes absence data
-sdmRasterDF<-rasterDF %>% subset(layer>1)
+# ymax <- extent(sdm.raster)[4]
+# 
+# plot.file.state <- paste0(outpath, outprefix, "-single-prediction-state-borders.jpg")
+# plot.file.country<- paste0(outpath, outprefix, "-single-prediction-country-borders.jpg")
+# plot.file.county<- paste0(outpath, outprefix, "-single-prediction-county-borders.jpg")
+# 
+# #Convert sdm.raster to a data frame
+# # First, to a SpatialPointsDataFrame
+# sdf <- rasterToPoints(sdm.raster, spatial = TRUE)
+# # Then to a 'conventional' dataframe
+# rasterDF  <- data.frame(sdf)
+# 
+# # removes absence data
+# sdmRasterDF<-rasterDF %>% subset(layer>1)
 
 ####################
 
 
 
-states<-ggplot(prepared.data) +
-  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
-  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
-  borders("state", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
-  scale_size_area() +
-  coord_quickmap() +
-  labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
-
-ggsave(plot.file.state, states)
-
-countries<-ggplot(prepared.data) +
-  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
-  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
-  borders("world", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
-  scale_size_area() +
-  coord_quickmap() +
-  labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
-
-
-ggsave(plot.file.country, countries)
-
-
-counties<-ggplot(prepared.data) +
-  geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
-  geom_point(aes(x=lon, y=lat, color='red'), show.legend=FALSE) +
-  borders("county", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
-  scale_size_area() +
-  coord_quickmap() +
-  labs(title="Species occurrences and distribution model", x="longitude", y="latitude")
-
-
-ggsave(plot.file.county, counties)
-
-
-# Let user know analysis is done.
-message(paste0("\nAnalysis complete. Map image written to ", plot.file.country, ", ", plot.file.county, ", and ",plot.file.state,"."))
-
-rm(list = ls())
+# states<-ggplot(prepared.data) +
+#   geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+#   geom_point(aes(x=lon, y=lat, color='red'), show.legend=TRUE) +
+#   borders("state", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+#   scale_size_area() +
+#   coord_quickmap() +
+#   labs(title="Species Distritbuion Model", x="Longitude", y="Latitude")
+# 
+# ggsave(plot.file.state, states)
+# 
+# countries<-ggplot(prepared.data) +
+#   geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+#   geom_point(aes(x=lon, y=lat, color='red'), show.legend=TRUE) +
+#   borders("world", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+#   scale_size_area() +
+#   coord_quickmap() +
+#   labs(title="Species Distribution Model", x="Longitude", y="Latitude")
+# 
+# 
+# ggsave(plot.file.country, countries)
+# 
+# 
+# counties<-ggplot(prepared.data) +
+#   geom_tile(data = sdmRasterDF , aes(x = x, y = y), show.legend=FALSE) +
+#   geom_point(aes(x=lon, y=lat, color='red'), show.legend=TRUE) +
+#   borders("county", xlim = c(xmin, xmax), ylim = c(ymin, ymax)) +
+#   scale_size_area() +
+#   coord_quickmap() +
+#   labs(title="Species Distribution Model", x="Longitude", y="Latitude")
+# 
+# 
+# ggsave(plot.file.county, counties)
+# 
+# 
+# # Let user know analysis is done.
+# message(paste0("\nAnalysis complete. Map image written to ", plot.file.country, ", ", plot.file.county, ", and ",plot.file.state,"."))
+# 
+# rm(list = ls())
 
 ######################
 
@@ -165,25 +165,37 @@ rm(list = ls())
 ############################
 
 # # Load in data for map borders
-# data(wrld_simpl)
-# 
-# # Draw the base map
-# plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), axes = TRUE, col = "gray95",
-#      main = paste0(gsub(pattern = "_", replacement = " ", x = outprefix), " - current"))
-# 
-# # Add the model rasters
-# plot(sdm.raster, legend = FALSE, add = TRUE)
-# 
-# # Redraw the borders of the base map
-# plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
-# 
-# # Add bounding box around map
-# box()
-# 
-# # Stop re-direction to PDF graphics device
-# dev.off()
-# 
-# # Let user know analysis is done.
-# message(paste0("\nAnalysis complete. Map image written to ", plot.file, "."))
-# 
-# rm(list = ls())
+data(wrld_simpl)
+
+# Draw the base map
+plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), axes = TRUE, col = "gray95",
+     main = paste0(gsub(pattern = "_", replacement = " ", x = outprefix), " Species Distribution Model with Occurence Data"), xlab='Longitude', ylab='Latitude')
+
+# Add the model rasters
+plot(sdm.raster, legend = FALSE, add = TRUE)
+
+# add occurence data
+points(x = prepared.data$lon,
+       y = prepared.data$lat,
+       col = "#ff455e",
+       pch = 20,
+       cex = 0.75)
+
+legend(x="bottomright", 
+       legend=c("Occurence", "Distribution"), 
+       col=c("#ff455e","#209606"), 
+       pch=20, merge=FALSE )
+
+# Redraw the borders of the base map
+plot(wrld_simpl, xlim = c(xmin, xmax), ylim = c(ymin, ymax), add = TRUE, border = "gray10", col = NA)
+
+# Add bounding box around map
+box()
+
+# Stop re-direction to PDF graphics device
+dev.off()
+
+# Let user know analysis is done.
+message(paste0("\nAnalysis complete. Map image written to ", plot.file, "."))
+
+rm(list = ls())

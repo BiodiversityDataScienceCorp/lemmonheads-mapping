@@ -51,15 +51,21 @@ occurenceMap <- function(lemmonData) {
        axes = TRUE, 
        col = "grey95",
        main="Lemmon's Milkweed species occurrences in Arizona and Mexico",  # title
+       xlab = 'Longitude', ylab='Latitude',
        sub="131 occurrences of Lemmon's Milkweed" # caption
   )
   
   # add the points for individual observation
   points(x = lemmonData$longitude, 
          y = lemmonData$latitude, 
-         col = "blue", 
+         col = "#ff455e", 
          pch = 20, 
          cex = 0.75)
+  
+  legend(x="bottomright", 
+         legend=c("Occurence"), 
+         col=c("#ff455e"), 
+         pch=20, merge=FALSE )
   
   # draw a little box around the graph
   box()

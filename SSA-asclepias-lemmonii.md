@@ -1,5 +1,7 @@
 # **Host Plant Information for Monarch Species Status Assessment (Danaus Plexippus: Nymphalidae)**
 
+## Authors: Adam Schwarz, Katelyn Osborne, and Katie Crocker
+
 #### [Github Repository](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping) and Zenodo Archive
 
 ## Species Name:
@@ -44,7 +46,7 @@ The climate data used came from WorldClim. This model takes into account 19 bioc
 
 ### Data Cleaning Process
 
-The data set queried from GBIF was checked to ensure it had all relevant information. This was done by looking for and removing incomplete longitude and latitude entries, entries labeled "Absent" in the occurence status column, and entries with an individual count of zero.
+The data set queried from GBIF was checked to ensure it had all relevant information. This was done by looking for and removing incomplete longitude and latitude entries, entries labeled "Absent" in the occurence status column, and entries with an individual count of zero. We did not query for specific years, as the data set was small enough that this would significantly lower our data count.
 
 ## Species Occurrence Map
 
@@ -88,4 +90,4 @@ Lemmonii milkweed are currently observed and recorded across what appears to be 
 
 ### [eol](https://eol.org/pages/586616)
 
-### [USFWS](https://www.fws.gov/southwest/es/Documents/R2ES/Pollinators/8-Milkweeds_Handbook_XerSoc_June2014.pdf)
+### [USFWS](https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf)
