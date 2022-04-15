@@ -18,21 +18,21 @@
 
 ## Etymology:
 
-The name *Asclepias* comes from the Greek God *Asklepios* who was the god of healing. The word *lemmonii* comes from American botanists, Sara (1836-1923) and John Lemmon (1832-1908), who focused their work in the Southwest.
+The name *Asclepias* comes from the Greek God *Asklepios* who was the god of healing. The word *lemmonii* comes from American botanists, Sara (1836-1923) and John Lemmon (1832-1908), who focused their work in the Southwest<sup>1</sup>.
 
 ## Species Description:
 
-Lemmon's Milkweed is a species of perennial herb in the family Apocynaceae. They are native to the contiguous United States. Flowers bloom in white, pink, and green in July through October. They are generally recognized by their large, rounded leaves, and can grow up to a height of 5 feet.
+Lemmon's Milkweed is a species of perennial herb in the family Apocynaceae. They are native to the contiguous United States. Flowers bloom in white, pink, and green in July through October<sup>2</sup>. They are generally recognized by their large, rounded leaves, and can grow up to a height of 5 feet<sup>3</sup>.
 
 ![Photo by Miz Makings](https://storage.idigbio.org/portals/seinet/arizona/Apocynaceae/201708/IMG_2399_-_Asclepias_lemmonii-_1503375324.jpg)
 
 ## Habitat Description:
 
-Lemmon's milkweed is found at elevations ranging from 1200-2100 meters. It generally grows in open and dry areas including slopes, canyons, and woodlands. Its habitat ranges from southern Arizona to southwestern Mexico.
+Lemmon's milkweed is found at elevations ranging from 1200-2100 meters. It generally grows in open and dry areas including slopes, canyons, and woodlands. Its habitat ranges from southern Arizona to southwestern Mexico<sup>4</sup>.
 
 ## Larval Host Information:
 
-There are no studies specifically on what species Lemmon's milkweed is a larval host for. Generally, milkweed species are known to be larval hosts for monarch butterflies. This is not the only species they're a host for. Milkweeds are also larval hosts for other butterflies and moths such as Dogbane Tiger moth (Cycnia tenera) and the Queen Butterfly (Danaus gilippus).
+There are no studies specifically on what species Lemmon's milkweed is a larval host for. Generally, milkweed species are known to be larval hosts for monarch butterflies. This is not the only species they're a host for. Milkweeds are also larval hosts for other butterflies and moths such as Dogbane Tiger moth (Cycnia tenera) and the Queen Butterfly (Danaus gilippus)<sup>5</sup>.
 
 ## Conservation Efforts:
 There is no evidence of past conservation efforts specifically focused on this species of milkweed. From species occurrence maps, it can be seen that this species is located primarily in natural regions away from urbanization in Arizona. Thus, this is not a species likely to be planted by citizens or botanical gardens in their effort to preserve milkweed species for monarch butterflies. 
@@ -41,7 +41,7 @@ There is no evidence of past conservation efforts specifically focused on this s
 
 ### [GBIF](https://www.gbif.org/species/3170287)
 
-All data was sourced and queried from GBIF for occurence and distribution modeling. The Global Biodiversity Information Facility (GBIF) is a site that works to provide everyone open access to data. This data source was used because it compiled all of the occurrence data we needed from multiple sources including iNaturalist and Arizona State University. The dataset was small enough where we did not add any query arguments.
+All data was sourced and queried from GBIF for occurence and distribution modeling. The Global Biodiversity Information Facility (GBIF) is a site that works to provide everyone open access to data. This data source was used because it compiled all of the occurrence data we needed from multiple sources including iNaturalist and Arizona State University<sup>6</sup>. The dataset was small enough where we did not add any query arguments.
 
 ### [WorldClim](https://www.worldclim.org/data/bioclim.html)
 
@@ -90,14 +90,15 @@ In monarch butterfly conservation efforts, we do not believe that the Lemmon’s
 
 ## References:
 
-### [GBIF](https://www.gbif.org/species/3170287)
+### 1. [SEINet](https://swbiodiversity.org/seinet/taxa/index.php?taxon=3763)
 
-### [NatureServe Explorer](https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.131047/Asclepias_lemmonii)
+### 2. [eol](https://eol.org/pages/586616)
 
-### [SEINet](https://swbiodiversity.org/seinet/taxa/index.php?taxon=3763)
+### 3. [NatureServe Explorer](https://explorer.natureserve.org/Taxon/ELEMENT_GLOBAL.2.131047/Asclepias_lemmonii)
 
-### [eol](https://eol.org/pages/586616)
+### 4. [Exerces](https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf)
 
-### [USFWS](https://www.xerces.org/sites/default/files/2018-05/17-031_02_XercesSoc_Milkweeds-Conservation-Guide_web.pdf)
+### 5. [GBIF](https://www.gbif.org/species/3170287)
 
+### 6. [GBIF](https://www.gbif.org/species/3170287)
 
