@@ -62,5 +62,5 @@ The following additional R packages are required (these will be installed by run
 4.  To create an occurence map, run `occurenceMap(lemmonData)`
 5.  To create either an SDM or an SDF, run `modelPrep(lemmonData)`
 
--   For an SDM or SDF, run `source("src/lemmonii-sdm-single.R")`
+-   For an SDM, run `source("src/lemmonii-sdm-single.R")`
 -   For an SDF, run `source("src/future-sdm-single.R")` after you have ran the previous line
