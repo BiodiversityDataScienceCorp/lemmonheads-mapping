@@ -2,7 +2,8 @@
 
 ## Authors: Adam Schwarz, Katelyn Osborne, and Katie Crocker
 
-#### [Github Repository](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping) and Zenodo Archive
+#### [Github Repository](https://github.com/BiodiversityDataScienceCorp/lemmonheads-mapping) and [![DOI](https://zenodo.org/badge/459737633.svg)](https://zenodo.org/badge/latestdoi/459737633)
+
 
 ## Species Name:
 
